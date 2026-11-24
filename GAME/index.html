@@ -3,17 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09131d">
   <title>GRAND CITY 6</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="menu">
-    <p class="eyebrow">UN NUEVO MUNDO TE ESPERA</p>
-    <h1>GRAND CITY <span>6</span></h1>
-    <p class="subtitle">Una aventura original de mundo abierto</p>
-    <div class="status">PROYECTO EN DESARROLLO · FASE 1/10</div>
-    <p class="note">La ciudad se está construyendo. Próximamente: exploración 3D.</p>
-  </main>
-  <script src="scripts/main.js"></script>
+  <div id="game">
+    <canvas id="world" aria-label="Mundo 3D de GRAND CITY 6"></canvas>
+    <section id="menu" class="menu">
+      <p class="eyebrow">UN NUEVO MUNDO TE ESPERA</p>
+      <h1>GRAND CITY <span>6</span></h1>
+      <p class="subtitle">Una aventura original de mundo abierto</p>
+      <button id="startButton" class="primary">ENTRAR A LA CIUDAD</button>
+      <p class="note">Prototipo 3D · Fase 2 de 10</p>
+    </section>
+    <aside id="hud" class="hud hidden">
+      <div class="hud-brand">GRAND CITY <b>6</b></div>
+      <div class="hud-help">WASD: moverse · V: cambiar cámara · Ratón: mirar</div>
+      <div id="cameraLabel" class="camera-label">TERCERA PERSONA</div>
+      <div class="hud-bottom">ZONA DE PRUEBA · PROTOTIPO 0.2</div>
+    </aside>
+    <div id="crosshair" class="crosshair hidden">+</div>
+    <div id="loading" class="loading">CARGANDO CIUDAD...</div>
+  </div>
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
